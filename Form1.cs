@@ -16,5 +16,18 @@ namespace Example13
         {
             InitializeComponent();
         }
+
+        private void btnEx_Click(object sender, EventArgs e)
+        {
+            DialogResult result = DialogResult.Yes;
+            while (result == DialogResult.Yes)
+            {
+                result = MessageBox.Show("続けますか？", "確認",MessageBoxButtons.YesNo);
+
+                System.Threading.Thread.Sleep(1000);
+                
+            }
+            MessageBox.Show("Whileループを終了しました", "情報");
+        }
     }
 }
